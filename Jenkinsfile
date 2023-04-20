@@ -33,6 +33,16 @@ pipeline {
                 archiveArtifacts artifacts: 'HRsystem-API.tar.gz', onlyIfSuccessful: true
             }
         }
+
+        stage('Deploy to Dev Env') {
+  steps {
+    script {
+      echo "Deploying to Dev environment"
+    }
+    // Other deployment steps go here
+  }
+}
+
     
     }
 }
