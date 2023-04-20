@@ -1,0 +1,90 @@
+###
+POST http://localhost:4000/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Jasreen",
+    "lastName":"Dhiman",
+    "email":"jasreendhiman@icloud.com",
+    "password":"jatinder",
+    "address":"14 Rain Lily Lane",
+    "city":"Brampton",
+    "phone":6473401234
+}
+
+###
+POST http://localhost:4000/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Admin",
+    "lastName":"Admin",
+    "email":"Admin@icloud.com",
+    "password":"jasreen",
+    "address":"Centennial College",
+    "city":"Scarborough",
+    "phone":6471239876,
+    "role": "Admin"
+}
+
+###
+POST http://localhost:4000/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Kiran",
+    "lastName":"Dhiman",
+    "email":"kirandhiman@icloud.com",
+    "password":"jatinder",
+    "address":"14 Rain Lily Lane",
+    "city":"Brampton",
+    "phone":6473423241
+}
+
+###
+POST http://localhost:4000/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"kirandhiman@icloud.com",
+    "password":"jatinder"
+}
+###
+GET http://localhost:4000/user/employees  HTTP/1.1
+
+###
+GET http://localhost:4000/user/users  HTTP/1.1
+
+###
+POST http://localhost:4000/user/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Jatinder",
+    "lastName":"Dhiman",
+    "email":"jatinderdhiman@icloud.com",
+    "password":"jatinder",
+    "address":"14 Rain Lily Lane",
+    "city":"Brampton",
+    "phone":6477803622
+}
+
+###
+GET   http://localhost:4000/user/64418baafc84cedba20fbad9  HTTP/1.1
+
+###
+PUT http://localhost:4000/user/64418baafc84cedba20fbad9  HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Jatinder",
+    "lastName":"Dhiman",
+    "email":"jatindersinghdhiman@icloud.com",
+    "password":"jatinder",
+    "address":"14 Rain Lily Lane",
+    "city":"Brampton",
+    "phone":6477803622
+}
+
+###
+DELETE http://localhost:4000/user/64418baafc84cedba20fbad9  HTTP/1.1
