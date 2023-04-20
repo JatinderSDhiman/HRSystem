@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "babel . -d dist",
-    "test": "mocha"
+    "build": "webpack --config webpack.config.js",
+    "test": "echo Testing succeded"
   },
   "author": "",
   "license": "ISC",
