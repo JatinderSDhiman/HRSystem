@@ -1,34 +1,38 @@
 pipeline {
     agent any
     
-    tools {nodejs "node"}
+    tools {
+        nodejs "node"
+        
+    }
 
     stages {
-        stage('Check out') {
+        stage('Checkout') {
             steps {
-                // Get some code from a GitHub repository
                 git branch: 'main', url: 'https://github.com/JatinderSDhiman/HRSystem.git'
             }
-
         }
-        stage('Install Dependencies') {
-            
-            steps {
+        
+        stage('Build'){
+            steps{
                 sh 'npm install'
             }
         }
-        stage('Test') {
-
-            steps {
-                sh 'npm test'
+        stage('Test'){
+            steps{
+                sh 'npm run test'
             }
         }
-        stage('Start server') {
-\
+        stage('Create tar file') {
             steps {
-                sh 'npm start'
+                sh 'tar -cvzf HRsystem-API.tar.gz .'
             }
         }
-
+        stage('Archive artifact') {
+            steps {
+                archiveArtifacts artifacts: 'HRsystem-API.tar.gz', onlyIfSuccessful: true
+            }
+        }
+    
     }
 }
