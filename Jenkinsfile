@@ -35,13 +35,34 @@ pipeline {
         }
 
         stage('Deploy to Dev Env') {
-  steps {
-    script {
-      echo "Deploying to Dev environment"
-    }
-    // Other deployment steps go here
-  }
-}
+            steps {
+                script {
+                    echo "Deploying to Dev environment"
+                }
+            }
+        }
+        stage('Deploy to QAT Env') {
+            steps {
+                script {
+                    echo "Deploying to QAT environment"
+                }
+            }
+        }
+        stage('Deploy to Staging Env') {
+            steps {
+                script {
+                    echo "Deploying to Staging environment"
+                }
+            }
+        }
+        stage('Deploy to Production  Env') {
+            steps {
+                script {
+                    echo "Deploying to Production  environment"
+                }
+            }
+        }
+        
 
     
     }

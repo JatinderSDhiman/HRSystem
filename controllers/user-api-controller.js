@@ -56,7 +56,9 @@ exports.listEmployees = async (req, res) => {
         .json({ message: "No employees exist in the record." });
     }
 
-    res.status(200).json({ message: "Employees found", employees });
+    res
+      .status(200)
+      .json({ message: `${employees.length} Employees found`, employees });
   } catch (error) {
     console.log(error);
     response.status(500).send(error);
@@ -69,7 +71,7 @@ exports.list = async (req, res) => {
     if (users === null) {
       return res.status(202).json({ message: "No users exist in the record." });
     }
-    res.status(200).json({ message: "Employees found", users });
+    res.status(200).json({ message: `${users.length} Employees found`, users });
   } catch (error) {
     console.log(error);
     res.status(500).send(error);
