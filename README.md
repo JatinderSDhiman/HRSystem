@@ -16,7 +16,7 @@ Once the dependencies are installed, you can start the server by running:
 
 npm start
 
-The server will be running at http://localhost:3000.
+The server will be running at http://localhost:4000.
 
 Contributing
 
