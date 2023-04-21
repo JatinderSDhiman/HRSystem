@@ -1,4 +1,4 @@
-# HRSystem
+# HR Management System
 
 HR Management System API
 
