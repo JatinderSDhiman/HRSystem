@@ -7,6 +7,7 @@ require("../database/connection");
 dotenv.config({ path: "./config.env" });
 
 exports.register = async (req, res) => {
+  console.log(req.body);
   const { firstName, lastName, email, password, address, city, phone } =
     req.body;
 
@@ -66,6 +67,7 @@ exports.logIn = async (req, res) => {
         res.setHeader("Set-Cookie", `token=${token}; HttpOnly`);
         return res.status(200).json({
           message: `Sign In successfull for ${userLogin.firstName} ${userLogin.lastName}`,
+          userLogin,
         });
       }
     } else {
